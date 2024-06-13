@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Home_ScreenActivity">
+
+    <!-- Heart icons -->
+    <ImageView
+        android:id="@+id/heart1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/heart"
+        app:tint="#FF4081" />
+
+    <ImageView
+        android:id="@+id/heart2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/heart"
+        app:tint="#FF4081" />
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/heart1"
+        android:layout_alignBottom="@+id/hexagonal_grid"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="175dp"
+        android:paddingEnd="@dimen/_30sdp"
+        android:src="@drawable/halfheart"
+        app:tint="#FF4081" />
+
+    <ImageView
+        android:id="@+id/hexagonal_grid"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:padding="16dp"
+        android:src="@drawable/female_streamers" />
+
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/hexagonal_grid"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/rectangle_stroke" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/quick_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_gradient"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="Quick Login"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/google_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_background_google"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="Login with Google"
+            android:textColor="#7E7A7A"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

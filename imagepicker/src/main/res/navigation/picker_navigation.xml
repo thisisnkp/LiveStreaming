@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/picker_navigation"
+    app:startDestination="@id/albumPickerFragment">
+
+    <fragment
+        android:id="@+id/albumPickerFragment"
+        android:name="com.comman.gallerypicker.fragment.AlbumPickerFragment"
+        android:label="fragment_album_picker"
+        tools:layout="@layout/fragment_album_picker">
+        <action
+            android:id="@+id/action_albumPickerFragment_to_albumPickerInfoFragment"
+            app:destination="@id/albumPickerInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/albumPickerInfoFragment"
+        android:name="com.comman.gallerypicker.fragment.AlbumPickerInfoFragment"
+        android:label="fragment_album_picker_info"
+        tools:layout="@layout/fragment_album_picker_info" />
+
+</navigation>

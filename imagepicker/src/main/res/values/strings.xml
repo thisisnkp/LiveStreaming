@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GalleryPicker</string>
+    <string name="thumbnail_transition">thumbnailTransition</string>
+    <string name="Continue">Continue</string>
+    <string name="no_albums">No albums</string>
+
+</resources>

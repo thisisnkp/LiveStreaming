@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+
+            name="isLoading"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        tools:context=".postDummies.UploadPostActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgback"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_back"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/abold"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/upload_post"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_20dp"
+                        android:backgroundTint="#BC0E6D"
+                        android:fontFamily="@font/abold"
+                        android:gravity="center"
+                        android:onClick="onClickPost"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/post"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/grayinsta" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_marginVertical="20dp"
+                                android:layout_weight=".40"
+                                android:background="@color/pinkbg">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/btnAdd"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_80sdp"
+                                        android:padding="15dp"
+                                        android:src="@drawable/upload_post" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/upload_image"
+                                        android:textColor="#707070"
+                                        android:textSize="@dimen/_14sdp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imageview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:maxHeight="300dp"
+                                    android:minHeight="250dp"
+                                    android:padding="2.5dp" />
+
+                                <ImageView
+                                    android:id="@+id/btnDelete"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/delete"
+                                    android:visibility="gone"
+                                    app:tint="@color/white" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".60" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".3dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="5dp"
+                            android:background="@color/grayinsta" />
+
+                        <com.example.rayzi.utils.socialView.SocialEditText
+                            android:id="@+id/decriptionView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="15dp"
+                            android:background="@drawable/bg_10dp_stockgray"
+                            android:backgroundTint="@color/pinkbg"
+                            android:fontFamily="@font/amidum"
+                            android:gravity="start"
+                            android:hint="@string/add_caption_with_hashtags_and_mentions"
+                            android:minHeight="@dimen/_120sdp"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".3dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="5dp"
+                            android:background="@color/grayinsta" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_10dp"
+                            android:backgroundTint="@color/pinkbg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lytLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:orientation="horizontal"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="3dp"
+                                    android:src="@drawable/location" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/amidum"
+                                    android:singleLine="true"
+                                    android:text="@string/location"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvLocation"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:ellipsize="marquee"
+                                    android:fontFamily="@font/abold"
+                                    android:gravity="end"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/white" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_round_keyboard_arrow_right_24"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="#1E1F29" />
+
+                            <LinearLayout
+                                android:id="@+id/lytPrivacy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="20dp"
+                                android:orientation="horizontal"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="4dp"
+                                    android:src="@drawable/eye" />
+
+                                <TextView
+                                    android:id="@+id/tvShowtO"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/amidum"
+                                    android:text="@string/show_to"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvPrivacy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/abold"
+                                    android:gravity="end"
+                                    android:text="@string/_public"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_round_keyboard_arrow_right_24"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="#1E1F29" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="20dp"
+                                android:orientation="horizontal"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="4dp"
+                                    android:src="@drawable/allow_comment" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/amidum"
+                                    android:gravity="start"
+                                    android:text="@string/allow_comments"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchComments"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:thumb="@drawable/custom_thumb"
+                                    app:track="@drawable/custom_track" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loder"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:visibility="@{ isLoading  ? View.VISIBLE : View.INVISIBLE}"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loder" />
+
+        <include layout="@layout/layout_no_internet" />
+
+    </RelativeLayout>
+
+</layout>

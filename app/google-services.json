@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "726175597019",
+    "project_id": "ds-live-83c94",
+    "storage_bucket": "ds-live-83c94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726175597019:android:dcb9b8dafbb21e692427fe",
+        "android_client_info": {
+          "package_name": "com.dslive.live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726175597019-5v4kgfmji5qec12m5h99e72to95t5t71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dslive.live",
+            "certificate_hash": "f70f045df505d8a44b4f3d52f123250c1bc53e25"
+          }
+        },
+        {
+          "client_id": "726175597019-esei9dldislngr8l60ou2rphchgsbaft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dslive.live",
+            "certificate_hash": "1859eea8da1b325ff2df1320997615fbf5e86d30"
+          }
+        },
+        {
+          "client_id": "726175597019-vg68e4maeopla1cfjdkfbblavhqvehj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dslive.live",
+            "certificate_hash": "c77c945f2140166179d1d1e61175b74c0df65b4f"
+          }
+        },
+        {
+          "client_id": "726175597019-3bmk2hk00tju47o8t2eu1didkh7sj46g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF9DZKQsLAtI6g8FCTKXL13eSYCUJgKP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726175597019-3bmk2hk00tju47o8t2eu1didkh7sj46g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical"
+        tools:context=".postDummies.FeedFragmentMain">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/layFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivFeed"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/feeds_select" />
+
+                    <ImageView
+                        android:id="@+id/ivFeedLine"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/tab_line" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivVideo"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/video_unselect" />
+
+                    <ImageView
+                        android:id="@+id/ivVideoLine"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/tab_line"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.example.rayzi.utils.UserProfileImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:src="@drawable/bg_gradient_round" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

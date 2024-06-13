@@ -1,0 +1,50 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    <solid android:color="#2C3E50" />-->
+
+    <!--    <gradient-->
+    <!--        android:startColor="#5C112B"-->
+    <!--    android:endColor="#9C27B0"-->
+    <!--    android:angle="27"-->
+    <!--    />-->
+
+    <!--    <gradient-->
+    <!--        android:startColor="#B6A2DD"-->
+    <!--        android:centerColor="#DB84EA"-->
+    <!--        android:endColor="#7979DF"-->
+    <!--        android:centerX="60%"-->
+    <!--        android:centerY="90%"-->
+    <!--        android:type="linear"-->
+    <!--        android:angle="90"/>-->
+
+
+    <!--        <gradient-->
+    <!--                android:startColor="#BED5EB"-->
+    <!--                android:centerColor="#D8A6E0"-->
+    <!--                android:endColor="#D8D8E8"-->
+    <!--                android:centerX="50%"-->
+    <!--            android:centerY="1%"-->
+    <!--                android:type="linear"-->
+    <!--                android:angle="90" />-->
+
+<!--    <gradient-->
+<!--        android:angle="4"-->
+<!--        android:centerColor="#E8CBED"-->
+<!--        android:centerX="30%"-->
+<!--        android:centerY="49%"-->
+<!--        android:endColor="#DCDCE4"-->
+<!--        android:startColor="#C6AAD2"-->
+<!--        android:type="linear" />-->
+
+<!--    <gradient-->
+<!--        android:angle="4"-->
+<!--        android:centerColor="#F2EEF2"-->
+<!--        android:centerX="30%"-->
+<!--        android:centerY="49%"-->
+<!--        android:endColor="#DCDCE4"-->
+<!--        android:startColor="#C6AAD2"-->
+<!--        android:type="linear" />-->
+    <solid
+        android:color="@color/white"/>
+
+</shape>

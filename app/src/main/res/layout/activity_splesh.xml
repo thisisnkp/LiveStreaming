@@ -1,0 +1,113 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.WellcomeScreenActivity">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Welcome"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/playButtonTopLeft"
+        android:layout_width="85dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rr1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+
+    <RelativeLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/bg_gradient"
+        app:layout_constraintBottom_toTopOf="@+id/playButtonBottomRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/engageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Engage your fans,\nlet your story expand"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/playButtonBottomRight"
+        android:layout_width="104dp"
+        android:layout_height="85dp"
+        android:src="@drawable/rr2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getStartedButton"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <ImageView
+        android:id="@+id/playButtonBottomRight2"
+        android:layout_width="104dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/rr2"
+        app:layout_constraintBottom_toTopOf="@+id/logoContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/playButtonTopLeft" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getStartedButton"
+        android:layout_width="238dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/bg_button_gradient"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Get started"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="271dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/ds_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
